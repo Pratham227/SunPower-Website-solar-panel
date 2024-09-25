@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunPower</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#">
+          <img src="SunPower.png" alt="SunPower Logo" />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Our Solar solutions</a></li>
+          <li><a href="#">Residential</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="sign-up-btn">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Still paying for electricity?</h1>
+      <br>
+      <a href="#" class="cta-btn">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Home Section -->
+  <section class="home-services">
+    <div class="container">
+      <h2 class="section-title">Our Solar Solutions</h2>
+
+      <div class="services-grid">
+        <!-- Home Service -->
+        <div class="service-card">
+          <img src="https://i.ibb.co/KKjbFHP/solar-home.jpg" alt="Solar Home" />
+          <h3>Home Solar Solutions</h3>
+          <p>Make your home energy efficient with our customized solar solutions. Reduce your electricity bill and go green.</p>
+        </div>
+
+        <!-- Housing Society Service -->
+        <div class="service-card">
+          <img src="https://i.ibb.co/khpGYgT/solar-housing-society.jpg" alt="Solar Housing Society" />
+          <h3>Housing Society Solutions</h3>
+          <p>Offer solar power to every flat in your society, reducing energy costs and fostering sustainability.</p>
+        </div>
+
+        <!-- Commercial Service -->
+        <div class="service-card">
+          <img src="https://i.ibb.co/6sB35CT/solar-commercial.jpg" alt="Solar Commercial" />
+          <h3>Commercial Solar Solutions</h3>
+          <p>Power your commercial building with solar energy and reduce your operational costs while contributing to a greener planet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solar Panel Steps Section -->
+  <section class="solar-steps">
+    <div class="container">
+      <h3 class="section-title">How it Works: Our Solar Panel Services</h3>
+
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Consultation</h3>
+          <p>We assess your energy needs and recommend the best solar solution for your property.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Installation</h3>
+          <p>Our expert team installs the solar panels seamlessly on your property.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Maintenance</h3>
+          <p>We provide continuous support and maintenance to ensure your solar panels perform optimally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Residential Section -->
+  <section class="residential-section">
+    <div class="container">
+      <!-- Quotes Section -->
+      <div class="quotes">
+        <h2 class="section-title">Why Choose Residential Solar?</h2>
+        <p class="quote">"Solar energy is the best investment you can make for your home. It’s a step towards a greener, sustainable future."</p>
+        <p class="quote">"Reduce your electricity bill, increase your savings, and make a difference with clean energy solutions."</p>
+      </div>
+
+      <!-- Creative Images Section -->
+      <div class="creative-images">
+        <img src="https://i.ibb.co/KKjbFHP/solar-home.jpg" alt="Solar Home Image" />
+        <img src="https://i.ibb.co/khpGYgT/solar-housing-society.jpg" alt="Solar Housing Society Image" />
+      </div>
+
+     
+        <div class="form-container">
+          <h2>Get Your Solar Solution</h2>
+          <p>Please fill out the form, and we'll get back to you with solar options for your housing society!</p>
+          
+          <form action="/submit" method="POST" id="housingForm">
+            <div class="form-group">
+              <label for="society">Housing Society Name</label>
+              <input type="text" id="society" name="society" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="electricity-bill">Monthly Electricity Bill (₹)</label>
+              <input type="number" id="electricity-bill" name="electricityBill" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="pincode">Pin Code</label>
+              <input type="number" id="pincode" name="pincode" required>
+            </div>
+      
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp Mobile Number</label>
+              <input type="text" id="whatsapp" name="whatsapp" required>
+            </div>
+      
+            <button type="submit">Submit</button>
+          </form>
+      
+          <div id="response"></div>
+        </div>
+      
+        <script>
+          // Optional: Handling the form submission asynchronously
+          const form = document.getElementById('housingForm');
+          form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const formData = new FormData(form);
+            const response = await fetch('/submit', {
+              method: 'POST',
+              body: formData
+            });
+      
+            const result = await response.text();
+            document.getElementById('response').innerText = result;
+          });
+        </script>
+    
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+  
+      <div class="faq-tabs">
+        <button class="tab-btn active" data-tab="general">General</button>
+        <button class="tab-btn" data-tab="maintenance">Solar Maintenance</button>
+        <button class="tab-btn" data-tab="economics">Solar Economics</button>
+      </div>
+  
+      <div class="faq-content">
+        <!-- General FAQ -->
+        <div class="faq-panel active" id="general">
+          <div class="faq-item">
+            <button class="faq-question">What is the lifespan of a rooftop solar system?</button>
+            <div class="faq-answer">
+              <p>Most solar systems last between 25 to 30 years, depending on the quality of materials and maintenance.</p>
+            </div>
+          </div>
+  
+          <div class="faq-item">
+            <button class="faq-question">How much will I save with a solar panel?</button>
+            <div class="faq-answer">
+              <p>Your savings depend on your location and energy consumption. On average, solar panels reduce electricity bills by 50-75%.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Solar Maintenance FAQ -->
+        <div class="faq-panel" id="maintenance">
+          <div class="faq-item">
+            <button class="faq-question">Do solar panels require a lot of maintenance?</button>
+            <div class="faq-answer">
+              <p>No, solar panels are low-maintenance. Occasionally, you need to clean them to ensure optimal performance.</p>
+            </div>
+          </div>
+  
+          <div class="faq-item">
+            <button class="faq-question">Can solar projects damage my roof?</button>
+            <div class="faq-answer">
+              <p>Solar panels are installed with care to avoid any damage to your roof. Proper installation ensures your roof stays intact.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Solar Economics FAQ -->
+        <div class="faq-panel" id="economics">
+          <div class="faq-item">
+            <button class="faq-question">Are solar panels financially viable?</button>
+            <div class="faq-answer">
+              <p>Yes, solar panels offer a significant return on investment through energy savings and government incentives.</p>
+            </div>
+          </div>
+  
+          <div class="faq-item">
+            <button class="faq-question">How long does it take to break even on a solar investment?</button>
+            <div class="faq-answer">
+              <p>Depending on your electricity usage and location, most solar investments break even in 5 to 10 years.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script src="faq-script.js"></script>i
+
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunPower Residential Section</title>
+    <link rel="stylesheet" href="residential.css">
+</head>
+<body>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Over 100+ Housing Societies Have Switched to Solar with SunPower</h1>
+            <p>What do they know that you don’t?</p>
+            <a href="#form" class="btn">Book a free consultation with us</a>
+        </div>
+    </section>
+
+    <!-- Owner Introduction Section -->
+    <section class="owner-intro">
+        <div class="owner-container">
+            <img src="owner.jpg" alt="Owner Image" class="owner-image">
+            <div class="owner-quote">
+                <blockquote>
+                    "SunPower is dedicated to providing the best solar panel solutions. Our mission is to help customers save energy and drastically reduce their electricity bills."
+                </blockquote>
+                <p><strong>John Doe</strong>, CEO of SunPower</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form" class="form-section">
+        <div class="form-container">
+            <h2>Schedule a FREE Consultation with Us Today!</h2>
+            <form>
+                <div class="form-group">
+                    <label for="housing-name">Name of Housing Society</label>
+                    <input type="text" id="housing-name" placeholder="Enter Housing Society Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pin">Pin Code</label>
+                    <input type="text" id="pin" placeholder="Enter Pin Code" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Enter City" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number</label>
+                    <input type="tel" id="whatsapp" placeholder="Enter WhatsApp Number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="electricity-bill">Monthly Electricity Bill (₹)</label>
+                    <input type="number" id="electricity-bill" placeholder="0 - 50000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="designation">Designation</label>
+                    <select id="designation" required>
+                        <option>Management Committee Member</option>
+                        <option>Resident</option>
+                        <option>Builder</option>
+                        <option>Facility Manager</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="approval-status">AGM Approval Status</label>
+                    <select id="approval-status" required>
+                        <option>We already have AGM approval</option>
+                        <option>Approval in process</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to SunPower’s terms of service & privacy policy</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="residential.js"></script>
+</body>
+</html>
