@@ -1,0 +1,150 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign.css">
+    <title>Solar Signup</title>
+</head>
+<body>
+    <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="SunPower.png" alt="SunPower Logo" id="logo">
+      </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="solution.html">Our Solar solutions</a></li>
+          <li><a href="residential.html">Residential</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="sign-up-btn">Sign Up</a>
+    </div>
+  </header>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Schedule a Site Survey with SolarSquare Energy</h1>
+        </div>
+    </section>
+
+    <!-- Form Container -->
+    <section class="form-container">
+        <div class="form-header">
+            <h2>Schedule a <span class="highlight">FREE consultation</span> with us today!</h2>
+            <p>Get genuine advice from our solar experts. No pressure, book only if you are satisfied!</p>
+        </div>
+        
+        <!-- Tabs for the form -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showForm('homes')">Homes</button>
+            <button class="tab-btn" onclick="showForm('housing')">Housing Society</button>
+            <button class="tab-btn" onclick="showForm('commercial')">Commercial</button>
+        </div>
+
+        <!-- Forms -->
+        <div class="form-content">
+            <!-- Homes Form -->
+            <form id="homes" class="form active">
+                <input type="text" placeholder="Full Name" required="">
+                <input type="text" placeholder="WhatsApp number" required="">
+                <label>Monthly Electricity Bill</label>
+                <select required="">
+                    <option value="" disabled="" selected="">Select your bill range</option>
+                    <option>Less than ₹1500</option>
+                    <option>₹1500 - ₹2500</option>
+                    <option>₹2500 - ₹4000</option>
+                    <option>₹4000 - ₹8000</option>
+                    <option>More than ₹8000</option>
+                </select>
+                <input type="text" placeholder="Pin code" required="">
+                <input type="text" placeholder="City" required="">
+                <input type="email" placeholder="Email" required="">
+                <label><input type="checkbox" required=""> I agree to SolarSquare’s <a href="#">terms of service</a> &amp; <a href="#">privacy policy</a></label>
+                <button type="submit">Yes! Reduce my electricity bill</button>
+            </form>
+
+            <!-- Housing Society Form -->
+            <form id="housing" class="form">
+                <input type="text" placeholder="Full Name" required="">
+                <input type="text" placeholder="Society Name" required="">
+                <input type="text" placeholder="WhatsApp number" required="">
+                <input type="text" placeholder="Pin code" required="">
+                <input type="text" placeholder="City" required="">
+                <input type="email" placeholder="Email" required="">
+                <label><input type="checkbox" required=""> I agree to SolarSquare’s <a href="#">terms of service</a> &amp; <a href="#">privacy policy</a></label>
+                <button type="submit">Yes! Reduce my electricity bill</button>
+            </form>
+
+            <!-- Commercial Form -->
+            <form id="commercial" class="form">
+                <input type="text" placeholder="Full Name" required="">
+                <input type="text" placeholder="Company Name" required="">
+                <input type="text" placeholder="WhatsApp number" required="">
+                <input type="text" placeholder="Pin code" required="">
+                <input type="text" placeholder="City" required="">
+                <input type="email" placeholder="Email" required="">
+                <label><input type="checkbox" required=""> I agree to SolarSquare’s <a href="#">terms of service</a> &amp; <a href="#">privacy policy</a></label>
+                <button type="submit">Yes! Reduce my electricity bill</button>
+            </form>
+        </div>
+    </section>
+ <!-- Footer Section -->
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <!-- About SunPower -->
+            <div class="footer-col">
+                <h3>About SunPower</h3>
+                <p>SunPower provides solar solutions for homes, businesses, and commercial spaces. Our goal is to reduce your electricity bill and promote renewable energy solutions.</p>
+                <img src="https://i.ibb.co/4SXpHvs/SunPower.png" alt="SunPower Logo" style="width: 120px; margin-top: 10px;">
+            </div>
+  
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Residential</a></li>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+  
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Agashi, Virar, Maharashtra</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 9766657691</li>
+                    <li><i class="fas fa-envelope"></i> contact@sunpower.com</li>
+                </ul>
+            </div>
+  
+            <!-- Social Media -->
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2024 SunPower. All Rights Reserved.</p>
+        </div>
+    </div>
+  </footer>
+    <script src="sign.js"></script>
+
+
+</body></html>
